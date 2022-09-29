@@ -20,4 +20,7 @@ const fetcher = function (url, filePath) {
 
 } 
 
-fetcher("http://www.example.edu/", "./index.html");
+const args = process.argv.slice(2);
+let urlIn = args[0];
+let filePathIn = args[1];
+fetcher(urlIn, filePathIn);
